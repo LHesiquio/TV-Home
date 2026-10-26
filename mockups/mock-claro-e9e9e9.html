@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #E9E9E9; }
+  body { font-family: 'Segoe UI', Roboto, Arial, sans-serif; }
+
+  #screen {
+    position: relative;
+    width: 1280px; height: 720px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #F6F6F6 0%, #E9E9E9 55%, #DEDEDE 100%);
+  }
+  #glow {
+    position: absolute; inset: 0;
+    background: radial-gradient(circle 1000px at 17% 0%, rgba(255,255,255,.32), rgba(255,255,255,0) 68%);
+  }
+
+  /* ---------------------------------------------------------- reloj */
+  .clock {
+    position: absolute; right: 53px; top: 18px;
+    font-size: 44px; font-weight: 300; color: #16181A;
+    letter-spacing: -1.2px; line-height: 1.15;
+  }
+  .date {
+    position: absolute; right: 55px; top: 74px;
+    font-size: 15px; color: #676B70;
+  }
+
+  /* --------------------------------------------------------- switch */
+  .switch {
+    position: absolute; right: 246px; top: 44px;
+    width: 96px; height: 40px; border-radius: 20px;
+    background: #DCDCDC; border: 1px solid #C8C8C8;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.05);
+  }
+  .knob {
+    position: absolute; left: 3px; top: 3px;
+    width: 32px; height: 32px; border-radius: 50%;
+    background: #FFFFFF;
+    box-shadow: 0 1px 4px rgba(0,0,0,.22);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .moon {
+    position: absolute; right: 9px; top: 12px;
+  }
+
+  /* --------------------------------------------------------- tarjetas */
+  .tile { position: absolute; width: 205px; }
+  .card {
+    width: 205px; height: 120px; border-radius: 20px;
+    background: #FFFFFF;
+    border: 1px solid #D5D5D5;
+    box-shadow: 0 6px 16px rgba(0,0,0,.10);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .card img { width: 88px; height: 88px; display: block; }
+  .label {
+    margin-top: 9px; text-align: center;
+    font-size: 16px; color: #34383D;
+  }
+
+  .row2 .card { height: 85px; border-radius: 18px; }
+  .row2 .card img { width: 56px; height: 56px; }
+
+  /* foco: anillo gris neutro + escala 1.06 */
+  .focus .card {
+    border: 2px solid #8E9297;
+    box-shadow: 0 10px 24px rgba(0,0,0,.15);
+    transform: scale(1.06);
+  }
+  .focus .label { font-weight: 700; color: #131313; }
+
+  /* ------------------------------------------------------------ pista */
+  .hint {
+    position: absolute; left: 0; right: 0; bottom: 40px;
+    text-align: center; font-size: 13.5px; color: #8A8E93;
+  }
+  .hint span { margin: 0 9px; }
+  .hint b { font-weight: 600; }
+</style>
+</head>
+<body>
+<div id="screen">
+  <div id="glow"></div>
+
+  <div class="switch">
+    <div class="knob">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2A2F3A" stroke-width="1.9" stroke-linecap="round">
+        <circle cx="12" cy="12" r="4.6"/>
+        <path d="M12 2.4v2.2M12 19.4v2.2M2.4 12h2.2M19.4 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/>
+      </svg>
+    </div>
+    <div class="moon">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="#7C8596">
+        <path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.8 8.8 0 1 0 11.1 11.1z"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="clock">12:43 a. m.</div>
+  <div class="date">domingo, 25 de octubre</div>
+
+  <!-- fila 1 -->
+  <div class="row1">
+    <div class="tile focus" style="left:53px; top:161px">
+      <div class="card"><img src="mock-assets/yt.png" alt=""></div>
+      <div class="label">YouTube</div>
+    </div>
+    <div class="tile" style="left:279px; top:161px">
+      <div class="card"><img src="mock-assets/dis.png" alt=""></div>
+      <div class="label">Disney+</div>
+    </div>
+    <div class="tile" style="left:505px; top:161px">
+      <div class="card"><img src="mock-assets/cru.png" alt=""></div>
+      <div class="label">Crunchyroll</div>
+    </div>
+    <div class="tile" style="left:731px; top:161px">
+      <div class="card"><img src="mock-assets/nfx.png" alt=""></div>
+      <div class="label">Netflix</div>
+    </div>
+    <div class="tile" style="left:957px; top:161px">
+      <div class="card"><img src="mock-assets/play.png" alt=""></div>
+      <div class="label">Play Store</div>
+    </div>
+  </div>
+
+  <!-- fila 2 -->
+  <div class="row2">
+    <div class="tile" style="left:53px; top:370px">
+      <div class="card"><img src="mock-assets/gear.png" alt=""></div>
+      <div class="label">Ajustes</div>
+    </div>
+    <div class="tile" style="left:279px; top:370px">
+      <div class="card"><img src="mock-assets/hdmi.png" alt=""></div>
+      <div class="label">Compuesto</div>
+    </div>
+    <div class="tile" style="left:505px; top:370px">
+      <div class="card"><img src="mock-assets/hdmi.png" alt=""></div>
+      <div class="label">HDMI 1</div>
+    </div>
+    <div class="tile" style="left:731px; top:370px">
+      <div class="card"><img src="mock-assets/hdmi.png" alt=""></div>
+      <div class="label">HDMI 2</div>
+    </div>
+  </div>
+
+  <div class="hint">
+    <span><b>OK</b> Abrir</span>
+    <span>&#9664; &#9654; Navegar</span>
+    <span>&#9650; &#9660; Cambiar fila</span>
+    <span>Mantener OK Opciones</span>
+    <span>&#8962; Inicio</span>
+  </div>
+</div>
+</body>
+</html>

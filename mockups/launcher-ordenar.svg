@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720"
+     font-family="Segoe UI, Inter, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b101d"/>
+      <stop offset="0.55" stop-color="#111a2d"/>
+      <stop offset="1" stop-color="#060810"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.22" cy="0.02" r="0.95">
+      <stop offset="0" stop-color="#3d6cff" stop-opacity="0.30"/>
+      <stop offset="0.45" stop-color="#3d6cff" stop-opacity="0.07"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.5" r="0.78">
+      <stop offset="0.5" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.55"/>
+    </radialGradient>
+    <linearGradient id="disney" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#081a33"/>
+      <stop offset="1" stop-color="#164a7a"/>
+    </linearGradient>
+    <filter id="liftShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#000000" flood-opacity="0.80"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="14" flood-color="#6f9bff" flood-opacity="0.55"/>
+    </filter>
+    <filter id="tileShadow" x="-35%" y="-35%" width="170%" height="170%">
+      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#000000" flood-opacity="0.50"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#glow)"/>
+  <rect width="1280" height="720" fill="url(#vig)"/>
+
+  <!-- titulo del modo -->
+  <text x="640" y="72" text-anchor="middle" font-size="20" font-weight="600"
+        fill="#cfd7e8" letter-spacing="0.5">Ordenando apps</text>
+
+  <!-- fila atenuada -->
+  <g opacity="0.42">
+    <g filter="url(#tileShadow)">
+      <rect x="160" y="150" width="168" height="168" rx="26" fill="#141414"/>
+    </g>
+    <text x="244" y="246" text-anchor="middle" font-size="27" font-weight="800"
+          fill="#E50914" letter-spacing="2">NETFLIX</text>
+    <text x="244" y="348" text-anchor="middle" font-size="16" fill="#d7dbe6">Netflix</text>
+
+    <g filter="url(#tileShadow)">
+      <rect x="358" y="150" width="168" height="168" rx="26" fill="#f5f5f7"/>
+    </g>
+    <rect x="402" y="206" width="80" height="56" rx="14" fill="#FF0000"/>
+    <polygon points="434,220 434,248 460,234" fill="#ffffff"/>
+    <text x="442" y="348" text-anchor="middle" font-size="16" fill="#d7dbe6">YouTube</text>
+
+    <g filter="url(#tileShadow)">
+      <rect x="754" y="150" width="168" height="168" rx="26" fill="#F47521"/>
+    </g>
+    <text x="838" y="232" text-anchor="middle" font-size="21" font-weight="700" fill="#ffffff">Crunchy</text>
+    <text x="838" y="258" text-anchor="middle" font-size="21" font-weight="700" fill="#ffffff">roll</text>
+    <text x="838" y="348" text-anchor="middle" font-size="16" fill="#d7dbe6">Crunchyroll</text>
+
+    <g filter="url(#tileShadow)">
+      <rect x="952" y="150" width="168" height="168" rx="26" fill="#f5f5f7"/>
+    </g>
+    <polygon points="1001,196 1001,234 1036,234" fill="#34A853"/>
+    <polygon points="1001,196 1036,234 1069,234" fill="#4285F4"/>
+    <polygon points="1001,234 1001,272 1036,234" fill="#FBBC05"/>
+    <polygon points="1001,272 1036,234 1069,234" fill="#EA4335"/>
+    <text x="1036" y="348" text-anchor="middle" font-size="16" fill="#d7dbe6">Play Store</text>
+  </g>
+
+  <!-- hueco fantasma donde estaba -->
+  <rect x="556" y="150" width="168" height="168" rx="26" fill="none"
+        stroke="#6f9bff" stroke-opacity="0.45" stroke-width="2" stroke-dasharray="8 8"/>
+
+  <!-- tile levantado -->
+  <g transform="translate(640,234) scale(1.16) translate(-640,-234)">
+    <rect x="556" y="150" width="168" height="168" rx="26" fill="url(#disney)"
+          stroke="#ffffff" stroke-width="3" filter="url(#liftShadow)"/>
+    <text x="640" y="246" text-anchor="middle" font-size="30" font-weight="700"
+          font-style="italic" fill="#ffffff">Disney+</text>
+    <text x="640" y="348" text-anchor="middle" font-size="18" fill="#ffffff">Disney+</text>
+  </g>
+
+  <!-- flechas de movimiento -->
+  <text x="512" y="244" text-anchor="middle" font-size="34" fill="#9dbcff">◀</text>
+  <text x="768" y="244" text-anchor="middle" font-size="34" fill="#9dbcff">▶</text>
+
+  <!-- pista -->
+  <text x="640" y="640" text-anchor="middle" font-size="15" fill="#aab4c8" letter-spacing="0.5">
+    ◀ ▶  Mover        OK  Soltar        ⌫  Cancelar
+  </text>
+  <text x="640" y="666" text-anchor="middle" font-size="12" fill="#67708a">
+    el orden se guarda solo y no se pierde al reiniciar
+  </text>
+</svg>
