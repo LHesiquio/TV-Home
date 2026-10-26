@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720"
+     font-family="Segoe UI, Inter, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b101d"/>
+      <stop offset="0.55" stop-color="#111a2d"/>
+      <stop offset="1" stop-color="#060810"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.22" cy="0.02" r="0.95">
+      <stop offset="0" stop-color="#3d6cff" stop-opacity="0.30"/>
+      <stop offset="0.45" stop-color="#3d6cff" stop-opacity="0.07"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.5" r="0.78">
+      <stop offset="0.5" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.55"/>
+    </radialGradient>
+    <linearGradient id="disney" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#081a33"/>
+      <stop offset="1" stop-color="#164a7a"/>
+    </linearGradient>
+    <filter id="focusShadow" x="-45%" y="-45%" width="190%" height="190%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.70"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="12" flood-color="#ffffff" flood-opacity="0.38"/>
+    </filter>
+    <filter id="tileShadow" x="-35%" y="-35%" width="170%" height="170%">
+      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#000000" flood-opacity="0.50"/>
+    </filter>
+  </defs>
+
+  <!-- background -->
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#glow)"/>
+  <rect width="1280" height="720" fill="url(#vig)"/>
+
+  <!-- clock -->
+  <text x="1214" y="66" text-anchor="end" font-size="34" font-weight="300"
+        fill="#e9edf5" letter-spacing="1">8:52</text>
+  <text x="1214" y="92" text-anchor="end" font-size="14" fill="#8b94a8">jueves, 22 de octubre</text>
+
+  <!-- ================= ROW 1: APPS ================= -->
+
+  <!-- YouTube -->
+  <g filter="url(#tileShadow)">
+    <rect x="160" y="150" width="168" height="168" rx="26" fill="#f5f5f7"/>
+  </g>
+  <rect x="204" y="206" width="80" height="56" rx="14" fill="#FF0000"/>
+  <polygon points="236,220 236,248 262,234" fill="#ffffff"/>
+  <text x="244" y="348" text-anchor="middle" font-size="16" fill="#d7dbe6">YouTube</text>
+
+  <!-- Disney+ (FOCUSED) -->
+  <g transform="translate(442,234) scale(1.14) translate(-442,-234)">
+    <rect x="358" y="150" width="168" height="168" rx="26" fill="url(#disney)"
+          stroke="#ffffff" stroke-width="3" filter="url(#focusShadow)"/>
+    <text x="442" y="246" text-anchor="middle" font-size="30" font-weight="700"
+          font-style="italic" fill="#ffffff">Disney+</text>
+    <text x="442" y="348" text-anchor="middle" font-size="18" fill="#ffffff">Disney+</text>
+  </g>
+
+  <!-- Crunchyroll -->
+  <g filter="url(#tileShadow)">
+    <rect x="556" y="150" width="168" height="168" rx="26" fill="#F47521"/>
+  </g>
+  <text x="640" y="232" text-anchor="middle" font-size="21" font-weight="700" fill="#ffffff">Crunchy</text>
+  <text x="640" y="258" text-anchor="middle" font-size="21" font-weight="700" fill="#ffffff">roll</text>
+  <text x="640" y="348" text-anchor="middle" font-size="16" fill="#d7dbe6">Crunchyroll</text>
+
+  <!-- Netflix -->
+  <g filter="url(#tileShadow)">
+    <rect x="754" y="150" width="168" height="168" rx="26" fill="#141414"/>
+  </g>
+  <text x="838" y="246" text-anchor="middle" font-size="27" font-weight="800"
+        fill="#E50914" letter-spacing="2">NETFLIX</text>
+  <text x="838" y="348" text-anchor="middle" font-size="16" fill="#d7dbe6">Netflix</text>
+
+  <!-- Google Play -->
+  <g filter="url(#tileShadow)">
+    <rect x="952" y="150" width="168" height="168" rx="26" fill="#f5f5f7"/>
+  </g>
+  <polygon points="1001,196 1001,234 1036,234" fill="#34A853"/>
+  <polygon points="1001,196 1036,234 1069,234" fill="#4285F4"/>
+  <polygon points="1001,234 1001,272 1036,234" fill="#FBBC05"/>
+  <polygon points="1001,272 1036,234 1069,234" fill="#EA4335"/>
+  <text x="1036" y="348" text-anchor="middle" font-size="16" fill="#d7dbe6">Play Store</text>
+
+  <!-- ================= ROW 2: SYSTEM / INPUTS ================= -->
+
+  <!-- Settings -->
+  <g filter="url(#tileShadow)">
+    <rect x="259" y="420" width="168" height="100" rx="20" fill="#242b3c"/>
+  </g>
+  <circle cx="343" cy="470" r="21" fill="none" stroke="#cdd5e4" stroke-width="7"/>
+  <g stroke="#cdd5e4" stroke-width="6" stroke-linecap="round">
+    <line x1="343" y1="442" x2="343" y2="433"/>
+    <line x1="343" y1="498" x2="343" y2="507"/>
+    <line x1="315" y1="470" x2="306" y2="470"/>
+    <line x1="371" y1="470" x2="380" y2="470"/>
+    <line x1="323" y1="450" x2="317" y2="444"/>
+    <line x1="363" y1="490" x2="369" y2="496"/>
+    <line x1="323" y1="490" x2="317" y2="496"/>
+    <line x1="363" y1="450" x2="369" y2="444"/>
+  </g>
+  <text x="343" y="548" text-anchor="middle" font-size="15" fill="#a7b0c2">Ajustes</text>
+
+  <!-- Video -->
+  <g filter="url(#tileShadow)">
+    <rect x="457" y="420" width="168" height="100" rx="20" fill="#1a73e8"/>
+  </g>
+  <circle cx="515" cy="470" r="6" fill="#ffffff"/>
+  <circle cx="541" cy="470" r="6" fill="#ffffff"/>
+  <circle cx="567" cy="470" r="6" fill="#ffffff"/>
+  <text x="541" y="548" text-anchor="middle" font-size="15" fill="#a7b0c2">Video</text>
+
+  <!-- HDMI 1 -->
+  <g filter="url(#tileShadow)">
+    <rect x="655" y="420" width="168" height="100" rx="20" fill="#1a73e8"/>
+  </g>
+  <path d="M714 452 h50 l6 10 v16 l-6 10 h-50 l-6 -10 v-16 z" fill="none"
+        stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/>
+  <text x="739" y="548" text-anchor="middle" font-size="15" fill="#a7b0c2">HDMI 1</text>
+
+  <!-- HDMI 2 -->
+  <g filter="url(#tileShadow)">
+    <rect x="853" y="420" width="168" height="100" rx="20" fill="#1a73e8"/>
+  </g>
+  <path d="M912 452 h50 l6 10 v16 l-6 10 h-50 l-6 -10 v-16 z" fill="none"
+        stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/>
+  <text x="937" y="548" text-anchor="middle" font-size="15" fill="#a7b0c2">HDMI 2</text>
+
+  <!-- controls hint -->
+  <text x="640" y="666" text-anchor="middle" font-size="13" fill="#67708a" letter-spacing="0.5">
+    OK  Abrir        ◀ ▶  Navegar        ⌂  Inicio
+  </text>
+</svg>

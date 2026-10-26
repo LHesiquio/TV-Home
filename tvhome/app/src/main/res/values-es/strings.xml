@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hint_default">OK  Abrir        &#9664; &#9654;  Navegar        &#9650; &#9660;  Cambiar fila        Mantener OK  Opciones        &#8962;  Inicio</string>
+    <string name="hint_move">&#9664; &#9654;  Mover        OK  Soltar        Atr&#225;s  Cancelar</string>
+    <string name="hint_menu">&#9650; &#9660;  Elegir        OK  Aceptar        Atr&#225;s  Cerrar</string>
+
+    <string name="menu_move">Mover</string>
+    <string name="menu_info">Informaci&#243;n</string>
+    <string name="settings">Ajustes</string>
+    <string name="input_fallback">Entrada</string>
+
+    <string name="error_open_app">No se pudo abrir</string>
+    <string name="error_open_info">No se pudo abrir la informaci&#243;n</string>
+    <string name="error_input_unavailable">Entrada no disponible</string>
+</resources>

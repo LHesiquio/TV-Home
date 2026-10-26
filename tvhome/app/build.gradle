@@ -1,0 +1,52 @@
+plugins {
+    id 'com.android.application'
+}
+
+def keystoreFile = rootProject.file("keystore.properties")
+def keystoreProps = new Properties()
+if (keystoreFile.exists()) {
+    keystoreProps.load(new FileInputStream(keystoreFile))
+}
+
+android {
+    namespace 'com.bumbu.tvhome'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.bumbu.tvhome"
+        minSdk 30
+        targetSdk 34
+        versionCode 5
+        versionName "1.1"
+    }
+
+    signingConfigs {
+        release {
+            if (keystoreFile.exists()) {
+                storeFile rootProject.file(keystoreProps['storeFile'])
+                storePassword keystoreProps['storePassword']
+                keyAlias keystoreProps['keyAlias']
+                keyPassword keystoreProps['keyPassword']
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    // no dependencies: no AndroidX, Compose or Kotlin
+}
+
+dependencies {
+}

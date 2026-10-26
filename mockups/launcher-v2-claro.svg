@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720"
+     font-family="Segoe UI, Inter, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F7F9FC"/>
+      <stop offset="0.55" stop-color="#EDF1F6"/>
+      <stop offset="1" stop-color="#E1E6EE"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.18" cy="0.02" r="0.9">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="0.55" stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="disney" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#081a33"/>
+      <stop offset="1" stop-color="#164a7a"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-30%" y="-40%" width="160%" height="190%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#1a2333" flood-opacity="0.15"/>
+    </filter>
+    <filter id="focusShadow" x="-45%" y="-55%" width="190%" height="220%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#1a2333" flood-opacity="0.26"/>
+    </filter>
+    <filter id="knobShadow" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1a2333" flood-opacity="0.28"/>
+    </filter>
+    <clipPath id="peek"><rect x="1176" y="160" width="104" height="116" rx="20"/></clipPath>
+  </defs>
+
+  <!-- background -->
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#glow)"/>
+
+  <!-- ================= TOP BAR ================= -->
+
+  <!-- light / dark switch -->
+  <rect x="1030" y="38" width="84" height="34" rx="17" fill="#DCE2EB" stroke="#C8D1DE"/>
+  <circle cx="1047" cy="55" r="14" fill="#ffffff" filter="url(#knobShadow)"/>
+  <g stroke="#2A2F3A" stroke-width="1.7" stroke-linecap="round">
+    <circle cx="1047" cy="55" r="4.6" fill="none"/>
+    <line x1="1047" y1="46.5" x2="1047" y2="44"/>
+    <line x1="1047" y1="66" x2="1047" y2="63.5"/>
+    <line x1="1038.5" y1="55" x2="1036" y2="55"/>
+    <line x1="1058" y1="55" x2="1055.5" y2="55"/>
+    <line x1="1041" y1="49" x2="1039.2" y2="47.2"/>
+    <line x1="1054.8" y1="62.8" x2="1053" y2="61"/>
+    <line x1="1041" y1="61" x2="1039.2" y2="62.8"/>
+    <line x1="1054.8" y1="47.2" x2="1053" y2="49"/>
+  </g>
+  <path fill-rule="evenodd" fill="#7C8596"
+        d="M1100 47.5a9.4 9.4 0 1 0 9.6 16.6 8.2 8.2 0 1 1-9.6-16.6z"/>
+
+  <!-- clock -->
+  <text x="1224" y="68" text-anchor="end" font-size="34" font-weight="300"
+        fill="#14171C" letter-spacing="0.5">8:52</text>
+  <text x="1224" y="94" text-anchor="end" font-size="14" fill="#6F7683">jueves, 22 de octubre</text>
+
+  <!-- ================= ROW 1: APPS ================= -->
+
+  <!-- YouTube -->
+  <rect x="56" y="160" width="200" height="116" rx="20" fill="#FFFFFF"
+        stroke="#DDE3EC" filter="url(#cardShadow)"/>
+  <g transform="translate(116,178)">
+    <rect x="4" y="16" width="72" height="48" rx="12" fill="#FF0000"/>
+    <polygon points="32,30 32,50 50,40" fill="#ffffff"/>
+  </g>
+  <text x="156" y="306" text-anchor="middle" font-size="16" fill="#3A404B">YouTube</text>
+
+  <!-- Disney+ (FOCUSED) -->
+  <g transform="translate(380,218) scale(1.06) translate(-380,-218)">
+    <rect x="280" y="160" width="200" height="116" rx="20" fill="#FFFFFF"
+          stroke="#14171C" stroke-width="3" filter="url(#focusShadow)"/>
+    <g transform="translate(340,178)">
+      <rect width="80" height="80" rx="18" fill="url(#disney)"/>
+      <text x="40" y="46" text-anchor="middle" font-size="17" font-weight="700"
+            font-style="italic" fill="#ffffff">Disney+</text>
+    </g>
+  </g>
+  <text x="380" y="308" text-anchor="middle" font-size="16" font-weight="600" fill="#14171C">Disney+</text>
+
+  <!-- Crunchyroll -->
+  <rect x="504" y="160" width="200" height="116" rx="20" fill="#FFFFFF"
+        stroke="#DDE3EC" filter="url(#cardShadow)"/>
+  <g transform="translate(564,178)">
+    <rect width="80" height="80" rx="18" fill="#F47521"/>
+    <circle cx="40" cy="40" r="24" fill="#ffffff"/>
+    <circle cx="49" cy="33" r="21" fill="#F47521"/>
+  </g>
+  <text x="604" y="306" text-anchor="middle" font-size="16" fill="#3A404B">Crunchyroll</text>
+
+  <!-- Netflix -->
+  <rect x="728" y="160" width="200" height="116" rx="20" fill="#FFFFFF"
+        stroke="#DDE3EC" filter="url(#cardShadow)"/>
+  <g transform="translate(788,178)">
+    <rect width="80" height="80" rx="18" fill="#141414"/>
+    <path d="M26,14 h9 l18,32 v-32 h9 v52 h-9 l-18,-32 v32 h-9 z" fill="#E50914"/>
+  </g>
+  <text x="828" y="306" text-anchor="middle" font-size="16" fill="#3A404B">Netflix</text>
+
+  <!-- Play Store -->
+  <rect x="952" y="160" width="200" height="116" rx="20" fill="#FFFFFF"
+        stroke="#DDE3EC" filter="url(#cardShadow)"/>
+  <g transform="translate(1012,178)">
+    <rect width="80" height="80" rx="18" fill="#FFFFFF" stroke="#DDE3EC"/>
+    <g transform="translate(19,16) scale(0.62)">
+      <polygon points="0,0 0,38 35,38" fill="#34A853"/>
+      <polygon points="0,0 35,38 68,38" fill="#4285F4"/>
+      <polygon points="0,38 0,76 35,38" fill="#FBBC05"/>
+      <polygon points="0,76 35,38 68,38" fill="#EA4335"/>
+    </g>
+  </g>
+  <text x="1052" y="306" text-anchor="middle" font-size="16" fill="#3A404B">Play Store</text>
+
+  <!-- sixth app peeking out -->
+  <g clip-path="url(#peek)">
+    <rect x="1176" y="160" width="200" height="116" rx="20" fill="#FFFFFF"
+          stroke="#DDE3EC" filter="url(#cardShadow)"/>
+  </g>
+
+  <!-- ================= FILA 2: SISTEMA ================= -->
+
+  <!-- Settings -->
+  <rect x="56" y="390" width="200" height="88" rx="18" fill="#FFFFFF"
+        stroke="#DDE3EC" filter="url(#cardShadow)"/>
+  <g transform="translate(130,408)">
+    <circle cx="26" cy="26" r="17" fill="none" stroke="#5A6272" stroke-width="6"/>
+    <circle cx="26" cy="26" r="6.5" fill="#5A6272"/>
+    <g stroke="#5A6272" stroke-width="5" stroke-linecap="round">
+      <line x1="26" y1="1.5" x2="26" y2="7"/>
+      <line x1="26" y1="45" x2="26" y2="50.5"/>
+      <line x1="1.5" y1="26" x2="7" y2="26"/>
+      <line x1="45" y1="26" x2="50.5" y2="26"/>
+      <line x1="8.5" y1="8.5" x2="12.4" y2="12.4"/>
+      <line x1="39.6" y1="39.6" x2="43.5" y2="43.5"/>
+      <line x1="8.5" y1="43.5" x2="12.4" y2="39.6"/>
+      <line x1="39.6" y1="12.4" x2="43.5" y2="8.5"/>
+    </g>
+  </g>
+  <text x="156" y="506" text-anchor="middle" font-size="15" fill="#5A6272">Ajustes</text>
+
+  <!-- Video -->
+  <rect x="280" y="390" width="200" height="88" rx="18" fill="#FFFFFF"
+        stroke="#DDE3EC" filter="url(#cardShadow)"/>
+  <g transform="translate(354,408)">
+    <rect x="2" y="13" width="48" height="26" rx="5" fill="none" stroke="#5A6272" stroke-width="4"/>
+    <polygon points="18,20 18,32 30,26" fill="#5A6272"/>
+  </g>
+  <text x="380" y="506" text-anchor="middle" font-size="15" fill="#5A6272">Video</text>
+
+  <!-- HDMI -->
+  <rect x="504" y="390" width="200" height="88" rx="18" fill="#FFFFFF"
+        stroke="#DDE3EC" filter="url(#cardShadow)"/>
+  <g transform="translate(578,408)">
+    <rect x="2" y="15" width="48" height="22" rx="4" fill="none" stroke="#5A6272" stroke-width="4"/>
+    <text x="26" y="31" text-anchor="middle" font-size="10" font-weight="700" fill="#5A6272">HDMI</text>
+  </g>
+  <text x="604" y="506" text-anchor="middle" font-size="15" fill="#5A6272">HDMI 1</text>
+
+  <!-- controls hint -->
+  <text x="640" y="664" text-anchor="middle" font-size="13" fill="#8A919E" letter-spacing="0.5">
+    OK  Abrir        ◀ ▶  Navegar        ▲ ▼  Cambiar fila        ⌂  Inicio
+  </text>
+</svg>

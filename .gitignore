@@ -1,0 +1,36 @@
+# --- Build output ---
+tvhome/.gradle/
+tvhome/build/
+tvhome/app/build/
+.gradle/
+build/
+
+# --- Local machine paths ---
+local.properties
+tvhome/local.properties
+
+# --- Signing material: NEVER commit these ---
+keystore.properties
+tvhome/keystore.properties
+*.jks
+*.keystore
+
+# --- Built binaries: publish them in GitHub Releases instead ---
+*.apk
+*.aab
+
+# --- Raw development captures (curated images live in docs/screenshots) ---
+tvhome/*.png
+mockups/*.png
+
+# --- Device-specific helper scripts (serial numbers / local IPs) ---
+conectar-hisense.ps1
+revertir-*.ps1
+
+# --- Editors and OS ---
+.idea/
+*.iml
+.vscode/
+Thumbs.db
+desktop.ini
+.DS_Store
